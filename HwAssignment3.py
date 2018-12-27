@@ -22,17 +22,20 @@ Hint: there's a built in Python function called "int" that will help you convert
 
 """
 
-def Check(x,y,z):
-    
-    if int(x)==int(y) or int(y)==int(z) or int(z)==int(x):
+def check(a, b, c):
+    if str(a) == str(b):
         return True
-    else :
+    elif str(a) == str(c):
+        return True
+    elif str(b) == str(c):
+        return True
+    else:
         return False
 
-      
-result =Check("10",10,5)
 
-print(result)
-    
-    
-    
+print(check(1, 3, 5))
+print(check(1, 1, 5))
+print(check(1, 3, 1))
+print(check(1, 5, 5))
+print(check(1, "5", 5))
+print(check("sgkasjglah", "5", 5))
